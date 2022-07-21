@@ -3,6 +3,8 @@
 import {Navbar,Nav,Container,NavDropdown} from 'react-bootstrap';
 import { Outlet, Link } from 'react-router-dom';
 import './navbar.css';
+import CartWidget from './CartWidget';
+
 
 const NavBarExample = ()=>{
     return(
@@ -30,12 +32,15 @@ const NavBarExample = ()=>{
                     </NavDropdown.Item>
                 </NavDropdown>
                 </Nav>
+                <CartWidget />
             </Navbar.Collapse>
             </Container>
         </Navbar>
 
         <section>
-            <Outlet></Outlet>
+            <Outlet>
+
+            </Outlet>
         </section>
         
         

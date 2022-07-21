@@ -2,8 +2,8 @@ import './App.css';
 import{BrowserRouter,Routes,Route,Navigate} from 'react-router-dom';
 import About from './components/about';
 import Contact from './components/contact';
-import Home from './components/home';
-import NavBarExample from './layouts/navbar'
+import ItemListContainer from './components/ItemListContainer';
+import NavBarExample from './components/navbar'
 
 
 
@@ -13,14 +13,15 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<NavBarExample/>}>
-          <Route index element={<Home/>}/>
+          <Route index element={<ItemListContainer saludo="hola bienvenido"/>}/>
           <Route path='/about' element={<About/>}/>
           <Route path='/contact' element={<Contact/>}/>
           <Route path='*' element={<Navigate replace to="/"/>}/>
 
         </Route>
       </Routes>
-      </BrowserRouter>     
+      </BrowserRouter>
+
     </div>
   );
 }
