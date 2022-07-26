@@ -1,9 +1,16 @@
-const ItemListContainer = (props)=>{
+import ItemCount from "./ItemCount";
+
+const ItemListContainer = ({saludo})=>{
+
+const onAdd = (cantidad)=>{
+console.log(`Agregaste ${cantidad} productos en el carrito`)
+}
 
         return (
-
-          <h1>{props.saludo}</h1>
-
+          <div>
+            <h1>{saludo}</h1>
+            <ItemCount initial={1} stock={5} onAdd= {onAdd}/>
+          </div>    
         );
 }
 export default ItemListContainer
