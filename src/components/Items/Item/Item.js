@@ -1,4 +1,4 @@
-import '../components/Item.css';
+import '../Item/Item.css';
 
 const Item = ({producto})=>{
     return(
