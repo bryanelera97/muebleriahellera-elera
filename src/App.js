@@ -13,12 +13,13 @@ function App() {
     <div className="App">
       <BrowserRouter>
       <NavBarExample/>
-      <Routes>
-        <Route path='/' element={<ItemListContainer saludo=" lista de Productos"/>}>
-          <Route path='/categoria/:id' element={<ItemListContainer saludo="lista de Productos"/>}/>
-          <Route path='/producto/:id' element={<ItemDetailContainer/>}/>
-          </Route>
-      </Routes>
+          <section className='center'>
+              <Routes>
+                  <Route path='/' element={<ItemListContainer saludo="LISTA DE PRODUCTOS"/>}/>
+                  <Route path='/categoria/:id' element={<ItemListContainer saludo="LISTA DE PRODUCTOS"/>}/>
+                  <Route path='/producto/:id' element={<ItemDetailContainer/>}/>
+              </Routes>
+          </section>
       </BrowserRouter>
 
     </div>
