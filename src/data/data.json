@@ -1,8 +1,22 @@
 {
+
+  "category":[
+
+    {"id": 1,
+      "name":"Sofas"
+    },
+    {"id": 2,
+      "name":"Sillas"
+    },
+    {"id": 3,
+      "name":"Muebles de sala"
+    }
+  ],
+
   "productos": [
     {
       "id": 1,
-      "category":"Sofas",
+      "category_id":1,
       "name": "Sofá Notch",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/218294-560-560/378705.jpg?v=637860694347430000",
@@ -12,7 +26,7 @@
     },
     {
       "id": 2,
-      "category":"Sillas",
+      "category_id":2,
       "name": "Silla de Piel de Cordero Vegana Mimi",
       "description":"El tapiz de piel de cordero artificial se vuelve glamoroso, envolviendo las vanguardistas curvas de la silla Mimi, en una esponjosa tela blanca que se ve y se siente real. Combinando sin esfuerzo los estilos tradicionales ",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/212368-560-560/Silla-de-Piel-de-Cordero-Vegana-Mimi921.jpg?v=637158312785800000",
@@ -21,7 +35,7 @@
     },
     {
       "id": 3,
-      "category":"Sillas",
+      "category_id":2,
       "name": "Silla Decorativa Harper Shearling",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/217883-560-560/AnyConv.com__233494.jpg?v=637799577356230000",
@@ -30,7 +44,7 @@
     },
     {
       "id": 4,
-      "category":"Sillas",
+      "category_id":2,
       "name": "Silla de Cuero Wells",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/217954-560-560/378786.jpg?v=637820278600000000",
@@ -39,7 +53,7 @@
     },
     {
       "id": 5,
-      "category":"Sillas",
+      "category_id":2,
       "name": "Silla Giratoria Holm",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/218731-560-560/AnyConv.com__571618.jpg?v=637883069868470000",
@@ -48,7 +62,7 @@
     },
     {
       "id": 6,
-      "category":"Sofas",
+      "category_id":1,
       "name": "Sofá Monahan",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/218418-560-560/241625.jpg?v=637865987685070000",
@@ -57,7 +71,7 @@
     },
     {
       "id": 7,
-      "category":"Sofas",
+      "category_id":1,
       "name": "Sofá de Cuero Wells",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/219004-560-560/378692.jpg?v=637923120032430000",
@@ -67,7 +81,7 @@
 
     {
       "id": 8,
-      "category":"Sofas",
+      "category_id":1,
       "name": "Sofá Rollins",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/213800-560-560/RollinsLeatherSofa-IMG-MAIN.jpg?v=637370159975830000",
@@ -76,7 +90,7 @@
     },
     {
       "id": 9,
-      "category":"Sofas",
+      "category_id":1,
       "name": "Sofá Rollins",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/213800-560-560/RollinsLeatherSofa-IMG-MAIN.jpg?v=637370159975830000",
@@ -85,7 +99,7 @@
     },
     {
       "id": 10,
-      "category":"Sofas",
+      "category_id":1,
       "name": "Sofá Rollins",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/213800-560-560/RollinsLeatherSofa-IMG-MAIN.jpg?v=637370159975830000",
@@ -94,7 +108,7 @@
     },
     {
       "id": 11,
-      "category":"Sofas",
+      "category_id":1,
       "name": "Sofá Rollins",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/213800-560-560/RollinsLeatherSofa-IMG-MAIN.jpg?v=637370159975830000",
@@ -103,7 +117,7 @@
     },
     {
       "id": 12,
-      "category":"Sofas",
+      "category_id":1,
       "name": "Sofá Rollins",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/213800-560-560/RollinsLeatherSofa-IMG-MAIN.jpg?v=637370159975830000",
@@ -112,7 +126,7 @@
     },
     {
       "id": 13,
-      "category":"Sofas",
+      "category_id":1,
       "name": "Sofá Rollins",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/213800-560-560/RollinsLeatherSofa-IMG-MAIN.jpg?v=637370159975830000",
@@ -121,7 +135,7 @@
     },
     {
       "id": 14,
-      "category":"Sofas",
+      "category_id":1,
       "name": "Sofá Rollins",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/213800-560-560/RollinsLeatherSofa-IMG-MAIN.jpg?v=637370159975830000",
@@ -130,7 +144,7 @@
     },
     {
       "id": 15,
-      "category":"Sofas",
+      "category_id":1,
       "name": "Sofá Rollins",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/213800-560-560/RollinsLeatherSofa-IMG-MAIN.jpg?v=637370159975830000",
@@ -139,7 +153,7 @@
     },
     {
       "id": 16,
-      "category":"Muebles-de-sala",
+      "category_id":3,
       "name": "Sofá Rollins",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/213800-560-560/RollinsLeatherSofa-IMG-MAIN.jpg?v=637370159975830000",
@@ -148,7 +162,7 @@
     },
     {
       "id": 17,
-      "category":"Muebles-de-sala",
+      "category_id":3,
       "name": "Sofá Rollins",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/213800-560-560/RollinsLeatherSofa-IMG-MAIN.jpg?v=637370159975830000",
@@ -157,7 +171,7 @@
     },
     {
       "id": 18,
-      "category":"Muebles-de-sala",
+      "category_id":3,
       "name": "Sofá Rollins",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/213800-560-560/RollinsLeatherSofa-IMG-MAIN.jpg?v=637370159975830000",
@@ -166,7 +180,7 @@
     },
     {
       "id": 19,
-      "category":"Muebles-de-sala",
+      "category_id":3,
       "name": "Sofá Rollins",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/213800-560-560/RollinsLeatherSofa-IMG-MAIN.jpg?v=637370159975830000",
@@ -175,7 +189,7 @@
     },
     {
       "id": 20,
-      "category":"Muebles-de-sala",
+      "category_id":3,
       "name": "Sofá Rollins",
       "description":"Marco está fabricado en banco con madera maciza y diseñada con certificación FSC® que se seca al horno para evitar deformaciones",
       "img": "https://cratebarrelpe.vteximg.com.br/arquivos/ids/213800-560-560/RollinsLeatherSofa-IMG-MAIN.jpg?v=637370159975830000",

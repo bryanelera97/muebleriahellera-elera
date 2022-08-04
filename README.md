@@ -1,3 +1,30 @@
+
+
+# MUEBLES HELLERA
+###Poyecto de una tienda de MUEBLES 
+
+### Contamos con tres categorias
+
+#MUEBLES DE SALA
+#SOFAS
+#SILLAS
+
+
+## - Para correr el proyecto:
+###### npm run start
+
+## - Para correr las apis
+###### npm run startApi
+###### http://localhost:5000/productos
+##### http://localhost:5000/productos?id=${id}
+##### http://localhost:5000/categorias
+##### http://localhost:5000/productos?categoria_id=${id}
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -37,13 +37,5 @@
   }
 }
 
-section{
-  color: #1e4d5a;
-  text-shadow: 3px 3px rgba(red, green, blue, alpha);
-  background-color: #d6dfe0;
-  height: 100vh;
 
-}
-Outlet{
-  background-color: #d6dfe0;
-}
+

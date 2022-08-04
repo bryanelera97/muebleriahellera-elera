@@ -1,42 +1,66 @@
-
-
-import {Navbar,Nav,Container,NavDropdown} from 'react-bootstrap';
 import { Outlet, Link } from 'react-router-dom';
 import './navbar.css';
 import CartWidget from '../Cart/CartWidget';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {useEffect, useState} from "react";
+import {getCategory} from "../../utils/api";
 
 
 const NavBarExample = ()=>{
+
+    const[categorias,setCategoria]= useState([])
+
+    useEffect(()=>{
+
+        getCategory().then(resp => {
+            console.log(resp)
+            setCategoria(resp)
+        }).catch(error => console.error(error))
+
+    },[])
+
+
+
+
     return(
-        <>   
+        <>
+            <nav className="navbar navbar-expand-lg navbar-dark  bg-dark ">
+                <div className="container-fluid">
+                    <div className="mr-60">
 
-        <Navbar className= "navBg" variant="dark" expand="lg">
-            <Container>
-            <Navbar.Brand styas={Link} to="/" >MUEBLES HELLERA</Navbar.Brand>
-            <Navbar.Toggle aria-controls="basic-navbar-nav" />
-            <Navbar.Collapse id="basic-navbar-nav">
-                <Nav className="me-auto">
-                    <Nav.Link as={Link} to="/">Home</Nav.Link>
-                    <Nav.Link as={Link} to="/about">About</Nav.Link>
-                    <Nav.Link as={Link} to="/contact">Contact</Nav.Link>
-               
-                <NavDropdown title="Category" id="basic-nav-dropdown">
-                    <NavDropdown.Item href="#action/3.1">Sofas</NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.2"> Sillas  </NavDropdown.Item>
-                    <NavDropdown.Item href="#action/3.3">Muebles-de-sala</NavDropdown.Item>
+                    </div>
+                    <div className="collapse navbar-collapse ml-2" id="navbarText ">
+                        <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+                            <li className="nav-item">
+                                <Link className="navbar-brand text-white" aria-current="page" to="/">MUEBLES HELLERA</Link>
+                            </li>
 
-                </NavDropdown>
-                </Nav>
-                <CartWidget />
-            </Navbar.Collapse>
-            </Container>
-        </Navbar>
+                        <li className="nav-item">
+                            {
+                                categorias.map(categoria=>(
+                                    <Link to={`/categoria/${categoria.id}`} className="navbar-brand text-white" key={categoria.id}>{categoria.name}</Link>
 
-        <section>
-            <Outlet>
+                                ))
+                            }
+                        </li>
 
-            </Outlet>
-        </section>
+                        </ul>
+                        <span className="navbar-text">
+                            <CartWidget/>
+                         </span>
+                    </div>
+                </div>
+            </nav>
+
+            <div className="contenedor" >
+
+                <Outlet>
+
+                </Outlet>
+
+            </div>
+
+
         
         
         </>
