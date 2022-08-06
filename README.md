@@ -17,8 +17,8 @@
 ###### npm run startApi
 ###### http://localhost:5000/productos
 ##### http://localhost:5000/productos?id=${id}
-##### http://localhost:5000/categorias
-##### http://localhost:5000/productos?categoria_id=${id}
+##### http://localhost:5000/category
+##### http://localhost:5000/productos?category_id=${id}
 
 
 
