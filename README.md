@@ -14,7 +14,7 @@
 ###### npm run start
 
 ## - Para correr las apis
-###### npm run startApi
+###### npm run runApi
 ###### http://localhost:5000/productos
 ##### http://localhost:5000/productos?id=${id}
 ##### http://localhost:5000/category
