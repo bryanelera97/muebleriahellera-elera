@@ -17,7 +17,7 @@ const ItemDetail = ({producto})=>{
            
             id : producto.id,
             name: producto.name,
-            precio: producto.price,
+            precio: producto.precio,
             img: producto.img,
             stock: producto.stock,
             cantidad: count
@@ -44,7 +44,7 @@ const ItemDetail = ({producto})=>{
                             <p className="card-text"><strong>Precio s/ </strong> {producto.precio}</p>
                             <p className="card-text"><strong>Stock: </strong><small className="text-muted">{producto.stock}</small></p>
                             { 
-                            compra ? <button onClick={()=>navegar("/carrito")}   ><strong>ir al carrito</strong></button> : <ItemCount initial={1} stock={producto.stock} onAdd={onAdd}  count={count} setContador={setContador} />
+                            compra ? <button onClick={()=>navegar("/carrito")}   ><strong>terminar compra</strong></button> : <ItemCount initial={1} stock={producto.stock} onAdd={onAdd}  count={count} setContador={setContador} />
 
                             }
                             
