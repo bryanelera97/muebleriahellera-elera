@@ -1,29 +1,42 @@
 
 import {useEffect, useState} from "react";
 import ItemList from "../ItemList/ItemList";
-import {getProductCategoria, getProductos} from "../../../utils/api";
 import {useParams} from "react-router-dom";
-
+import {db} from "../../../firebase/firebase";
+import { query, where, collection, getDocs } from "firebase/firestore"
 
 const ItemListContainer = ({saludo})=>{
 
-    const { id } = useParams()
 
+    const { id } = useParams()
     const[listaProductos,setListaProductos]= useState([])
 
-    useEffect(()=>{
-        if(id == null){
+    useEffect(() => {
 
-            getProductos().then(resp => {
-                setListaProductos(resp)
-            }).catch(error => console.error(error))
+        const q = id
+            ? query(collection(db, 'productos'), where("category_id", "==", id))
+            : collection(db, 'productos')
 
-        }else{
-            getProductCategoria(id).then(resp => {
-                setListaProductos(resp)
-            }).catch(error => console.error(error))
-        }
-    },[id])
+        getDocs(q)
+            .then(result => {
+                console.log({result})
+                const lista = result.docs.map((product) => {
+                    return {
+                        id: product.id,
+                        ...product.data()
+                    }
+                })
+                console.log({lista})
+                setListaProductos(lista)
+            })
+            .catch((error) => console.log(error))
+
+
+
+    }, [id]);
+
+
+
 
     console.log({listaProductos})
         return (

@@ -11,7 +11,6 @@ function CartWidget() {
     const {cantidadTotalDeProductosCarrito} = useContext(CartContext)
     return (
         <>
-
             {
               cantidadTotalDeProductosCarrito() > 0 ? (
                   <Link to="/carrito">
@@ -23,10 +22,6 @@ function CartWidget() {
                   </Link>
               ) : " "
             }
-
-
-
-
         </>
 
     );

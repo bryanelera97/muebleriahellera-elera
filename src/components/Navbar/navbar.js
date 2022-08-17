@@ -3,8 +3,9 @@ import './navbar.css';
 import CartWidget from '../Cart/CartWidget';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {useEffect, useState} from "react";
-import {getCategory} from "../../utils/api";
-
+// import {getCategory} from "../../utils/api";
+import {db} from "../../firebase/firebase";
+import {collection, getDocs } from "firebase/firestore"
 
 const NavBarExample = ()=>{
 
@@ -12,10 +13,20 @@ const NavBarExample = ()=>{
 
     useEffect(()=>{
 
-        getCategory().then(resp => {
-            console.log(resp)
-            setCategoria(resp)
-        }).catch(error => console.error(error))
+        const q = collection(db, 'category')
+        getDocs(q)
+            .then(result => {
+                console.log({result})
+                const lista = result.docs.map((categoria) => {
+                    return {
+                        id: categoria.id,
+                        ...categoria.data()
+                    }
+                })
+                console.log({lista})
+                setCategoria(lista)
+            })
+            .catch((error) => console.log(error))
 
     },[])
 

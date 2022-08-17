@@ -6,7 +6,7 @@ import {useContext} from "react";
 
 function Carrito() {
 
-    const { cart, removeItem,cantidadTotalDeProductosCarrito, precioTotal} = useContext(CartContext)
+    const { cart, removeItem,cantidadTotalDeProductosCarrito, precioTotal,clear} = useContext(CartContext)
     const navigate = useNavigate()
 
 
@@ -14,36 +14,37 @@ function Carrito() {
         <>
             {
                 cantidadTotalDeProductosCarrito() > 0 ? (
-                    <div className="col-10">
+                    <div className="container mt-3">
+                        <h2 className="text-danger">Cantidad de productos: {cantidadTotalDeProductosCarrito()}</h2>
+                        <button className="btn-carro" onClick={()=> clear()}>Limpiar carrito</button>
+                        <br/>
                         <table className="table">
                             <thead>
                             <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">nombre</th>
-                                <th scope="col">precio uni</th>
-                                <th scope="col">cantidad</th>
-                                <th scope="col" className="text-end">sub total</th>
-                                <th scope="col">acciones</th>
+                                <th >Nombre Producto</th>
+                                <th >precio uni</th>
+                                <th >cantidad</th>
+                                <th  className="text-end">sub total</th>
+                                <th className="text-center">acciones</th>
                             </tr>
                             </thead>
                             <tbody>
                             {
 
                                 cart.map(el=>(
-
-                                    <tr>
-                                        <th scope="row">{el.id}</th>
+                                    <tr key={el.id}>
                                         <td>{el.name}</td>
-                                        <td>{el.precio}</td>
+                                        <td>S/{el.precio}</td>
                                         <td>{el.cantidad}</td>
-                                        <td className="text-end">{el.precio * el.cantidad} </td>
+                                        <td className="text-end">S/{el.precio * el.cantidad} </td>
                                         <td> <button className="btn btn-danger" onClick={()=>removeItem(el.id)}> eliminar </button></td>
                                     </tr>
                                 ))
                             }
                             <tr>
                                 <td>Total</td>
-                                <td colSpan="4" className="text-end">{precioTotal()}</td>
+                                <td colSpan="3" className="text-end">{precioTotal()}</td>
+                                <td colSpan="4"> <button className="btn  text-primary">Pagar</button>  </td>
                             </tr>
 
                             </tbody>
@@ -54,8 +55,9 @@ function Carrito() {
 
                 ) : (
                     <div>
-                        <h1>no hay productos</h1>
-                        <button className="btn btn-danger" onClick={()=> navigate("/")}> Seguir comprando </button>
+
+                        <h6 className="text-primary">No se tiene productos seleccionados</h6>
+                        <button className="btn btn-danger" onClick={()=> navigate("/")}>Ir a comprar</button>
                     </div>
 
                 )

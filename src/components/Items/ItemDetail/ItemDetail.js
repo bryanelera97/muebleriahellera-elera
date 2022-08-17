@@ -44,11 +44,11 @@ const ItemDetail = ({producto})=>{
                             <p className="card-text"><strong>Precio s/ </strong> {producto.precio}</p>
                             <p className="card-text"><strong>Stock: </strong><small className="text-muted">{producto.stock}</small></p>
                             { 
-                            compra ? <button onClick={()=>navegar("/carrito")}   ><strong>terminar compra</strong></button> : <ItemCount initial={1} stock={producto.stock} onAdd={onAdd}  count={count} setContador={setContador} />
-
+                             compra ? <div><button className="btn btn-primary text-dark"  onClick={()=> navegar("/")} >Seguir comprando</button> <button className="btn btn-danger text-dark" onClick={()=> navegar("/carrito")} >Ir a carrito</button></div>
+                                    :  <ItemCount initial={1} stock={producto.stock} count={count} setContador={setContador} onAdd={onAdd}/>
                             }
-                            
-                            
+
+
                         </div>
                     </div>
                 </div>
