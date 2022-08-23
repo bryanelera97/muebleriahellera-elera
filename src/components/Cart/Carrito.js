@@ -44,7 +44,7 @@ function Carrito() {
                             <tr>
                                 <td>Total</td>
                                 <td colSpan="3" className="text-end">{precioTotal()}</td>
-                                <td colSpan="4"> <button className="btn  text-primary">Pagar</button>  </td>
+                                <td colSpan="4"> <button className="btn  text-primary" onClick={()=> navigate("/checkout")}>Pagar</button>  </td>
                             </tr>
 
                             </tbody>
